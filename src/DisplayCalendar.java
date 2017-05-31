@@ -1,5 +1,7 @@
 import java.time.LocalDate;
 import java.time.Month;
+import java.time.format.TextStyle;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class DisplayCalendar {
@@ -39,6 +41,7 @@ public class DisplayCalendar {
 		{
 			output[i]=" ";
 		}
+		System.out.printf("         "+month.getDisplayName(TextStyle.FULL, Locale.ENGLISH)+" "+input.getYear()+"\n" );
 		for(int j=0; j<7; j++ )
 		{
 			System.out.print(week[j]+" ");
